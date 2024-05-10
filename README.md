@@ -17,7 +17,7 @@ Requisitos Funcionais:<br>
 1. O sistema deve ser capaz de representar hotéis e passagens;<br>
 2. Cada porduto deve ter uma série de atributos descritivos;<br>
 3. O sistema deve permitir ao usuário reservar produtos no carrinho;<br>
-4. Deve ser possível remover itens do carrinho;<br>
+4. Deve ser possível remover itens do carrinho;<br><br>
 Requisitos Não Funcionais:<br>
 1. O sistema deve ser fácil de usar e ter uma interface intuitiva.<br>
 2. O código deve ser bem organizado e seguir boas práticas de programação.<br>
