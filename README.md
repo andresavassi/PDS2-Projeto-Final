@@ -1,6 +1,6 @@
 # Programação e Desenvolvimento de Software 2 - Projeto Final
-# UFMG 2024.1
-# Profa. Evellyn Soares Cavalcante
+<b>UFMG 2024.1</b><br>
+<b>Profa. Evellyn Soares Cavalcante</b><br><br>
 
 <b>Descrição do Projeto</b><br><br>
 Eu sou o representante de uma empresa do ramo de venda de passagens aéreas e de reserva de vagas de hotel.<br>
