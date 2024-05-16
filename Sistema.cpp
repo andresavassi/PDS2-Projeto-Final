@@ -14,6 +14,27 @@ std::vector<std::string> Sistema::splitString(const std::string& s, char delim) 
 	return result;
 }
 
+void Sistema::readInteger(int& n, int min, int max) {
+	int ans = min - 1;
+	while (true) {
+		std::cout << ">> ";
+		if (std::cin >> ans) {
+			if (ans < min || ans > max) {
+				std::cout << "valor fora da faixa esperada" << std::endl;
+			}
+			else {
+				n = ans;
+				break;
+			}
+		}
+		else {
+			std::cout << "input ruim - tipo invalido" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(512, '\n');
+		}
+	}
+}
+
 void Sistema::loadStoreFromFile(std::string filepath) {
 	std::fstream filestream;
 	std::vector<std::string> splittedLine, splittedTakeOffLocationString, splittedLandingLocationString, splittedLocationString;
@@ -64,20 +85,53 @@ void Sistema::loadStoreFromFile(std::string filepath) {
 }
 
 void Sistema::showProductList(int productKind) {
-	if (productKind == TICKETS) {
+	if (productKind == FLY_TICKETS) {
 		for (Passagem ticket : this->flyTickets) {
 			std::cout << "id: " << ticket.getId() << std::endl;
-			std::cout << "price: $" << ticket.getPrice() << std::endl;
-			std::cout << "taking off: " << ticket.getTakeOffLocation().city << std::endl;
-			std::cout << "landing: " << ticket.getLandingLocation().city << std::endl << std::endl;
+			std::cout << "preco: $" << ticket.getPrice() << std::endl;
+			std::cout << "decolando de: " << ticket.getTakeOffLocation().city << std::endl;
+			std::cout << "pousando em: " << ticket.getLandingLocation().city << std::endl << std::endl;
 		}
 	}
 	else if (productKind == HOTEL_ROOMS) {
 		for (Hotel hotelRoom : this->hotelRooms) {
 			std::cout << "id: " << hotelRoom.getId() << ";" << std::endl;
-			std::cout << "price/day: $" << hotelRoom.getPrice() << ";" << std::endl;
-			std::cout << "location: " << hotelRoom.getLocation().city << ";" << std::endl << std::endl;
+			std::cout << "preco/dia: $" << hotelRoom.getPrice() << ";" << std::endl;
+			std::cout << "local: " << hotelRoom.getLocation().city << ";" << std::endl << std::endl;
 		}
 	}
 }
 
+Passagem Sistema::pickFlyTicket() {
+	int ticketId;
+	std::cout << std::endl << "apresentando lista de passagens aereas disponiveis" << std::endl << std::endl;
+	this->showProductList(FLY_TICKETS);
+	std::cout << "digite o id da passagem desejada para seleciona-la" << std::endl;
+	std::cout << ">> ";
+	std::cin >> ticketId;
+	for (auto passagem : this->flyTickets)
+		if (passagem.getId() == ticketId)
+			return passagem;
+	std::cout << "o id nao corresponde a nenhum item" << std::endl;
+	Passagem blankFlyTicket;
+	return blankFlyTicket;
+}
+
+Hotel Sistema::pickHotelRoom() {
+	int hotelRoomId;
+	std::cout << std::endl << "apresentando lista de quartos de hotel disponiveis" << std::endl << std::endl;
+	this->showProductList(HOTEL_ROOMS);
+	std::cout << "digite o id do quarto de hotel desejado para seleciona-lo" << std::endl;
+	std::cout << ">> ";
+	std::cin >> hotelRoomId;
+	for (auto hotelRoom : this->hotelRooms)
+		if (hotelRoom.getId() == hotelRoomId)
+			return hotelRoom;
+	std::cout << "o id nao corresponde a nenhum item" << std::endl;
+	Hotel emptyHotelRoom;
+	return emptyHotelRoom;
+}
+
+void Sistema::printSectionDelimiter() {
+	std::cout << std::endl << "-----------------------------------------------------------------------" << std::endl;
+}

@@ -6,6 +6,7 @@
 class Hotel : public Produto {
 	public:
 		Hotel(int id, float price, Location location);
+		Hotel();
 		Location getLocation();
 	private:
 		Location location;

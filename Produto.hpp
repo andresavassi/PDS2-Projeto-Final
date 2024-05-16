@@ -2,6 +2,10 @@
 #define PRODUTO_HPP
 
 #include "Location.hpp"
+#include <vector>
+#include <fstream>
+#include <string>
+#include <sstream>
 
 class Produto {
 	public:

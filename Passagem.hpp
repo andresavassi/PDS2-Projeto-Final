@@ -6,6 +6,7 @@
 class Passagem : public Produto {
 	public:
 		Passagem(int id, float price, Location takeOffLocation, Location landingLocation);
+		Passagem();
 		Location getTakeOffLocation();
 		Location getLandingLocation();
 	private:
