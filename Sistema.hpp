@@ -3,6 +3,10 @@
 
 #include "Cliente.hpp"
 
+/// <summary>
+/// 
+/// Classe que representa o sistema de reservas
+/// </summary>
 class Sistema {
 	public:
 		void loadStoreFromFile(std::string filepath);

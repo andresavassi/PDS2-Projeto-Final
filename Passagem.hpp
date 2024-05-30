@@ -3,6 +3,10 @@
 
 #include "Produto.hpp"
 
+/// <summary>
+/// 
+/// Classe que representa uma passagem de aviao
+/// </summary>
 class Passagem : public Produto {
 	public:
 		Passagem(int id, float price, Location takeOffLocation, Location landingLocation, int qntd=1);

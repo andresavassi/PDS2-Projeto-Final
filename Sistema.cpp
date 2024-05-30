@@ -1,7 +1,13 @@
 #include "Sistema.hpp"
 
-// split string based on character delimiter
-// source: https://stackoverflow.com/questions/14265581/parse-split-a-string-in-c-using-string-delimiter-standard-c
+/// <summary>
+/// 
+/// Separa string de acordo com o caracter delimitador
+/// fonte: https://stackoverflow.com/questions/14265581/parse-split-a-string-in-c-using-string-delimiter-standard-c
+/// </summary>
+/// <param name="s">: string a ser separada</param>
+/// <param name="delim">: caracter delimitador</param>
+/// <returns></returns>
 std::vector<std::string> Sistema::splitString(const std::string& s, char delim) {
 	std::vector<std::string> result;
 	std::stringstream ss(s);
@@ -14,6 +20,13 @@ std::vector<std::string> Sistema::splitString(const std::string& s, char delim) 
 	return result;
 }
 
+/// <summary>
+/// 
+/// Le um inteiro dentro da faixa [min, max]
+/// </summary>
+/// <param name="n">: referencia para o inteiro</param>
+/// <param name="min">: valor minimo</param>
+/// <param name="max">: valor maximo</param>
 void Sistema::readInteger(int& n, int min, int max) {
 	int ans = min - 1;
 	while (true) {
@@ -35,6 +48,11 @@ void Sistema::readInteger(int& n, int min, int max) {
 	}
 }
 
+/// <summary>
+/// 
+/// Carrega a loja com os produtos lidos de um arquivo texto
+/// </summary>
+/// <param name="filepath">: caminho para o arquivo texto</param>
 void Sistema::loadStoreFromFile(std::string filepath) {
 	std::fstream filestream;
 	std::vector<std::string> splittedLine, splittedTakeOffLocationString, splittedLandingLocationString, splittedLocationString;
@@ -84,6 +102,11 @@ void Sistema::loadStoreFromFile(std::string filepath) {
 	}
 }
 
+/// <summary>
+/// 
+/// Imprime a lista de produtos cadastrados
+/// </summary>
+/// <param name="productKind">: tipo de produto a exibir (filtro)</param>
 void Sistema::showProductList(int productKind) {
 	if (productKind == FLY_TICKETS) {
 		for (Passagem ticket : this->flyTickets) {
@@ -102,6 +125,11 @@ void Sistema::showProductList(int productKind) {
 	}
 }
 
+/// <summary>
+/// 
+/// Imprime as passagens disponiveis e solicita que o usuario escolha uma delas
+/// </summary>
+/// <returns>Passagem escolhida</returns>
 Passagem Sistema::pickFlyTicket() {
 	int ticketId;
 	std::cout << std::endl << "apresentando lista de passagens aereas disponiveis" << std::endl << std::endl;
@@ -117,6 +145,11 @@ Passagem Sistema::pickFlyTicket() {
 	return blankFlyTicket;
 }
 
+/// <summary>
+/// 
+/// Imprime os quartos de hotel disponiveis para reserva e solicita que o usuario escolha um deles
+/// </summary>
+/// <returns>Quarto de hotel escolhido</returns>
 Hotel Sistema::pickHotelRoom() {
 	int hotelRoomId;
 	std::cout << std::endl << "apresentando lista de quartos de hotel disponiveis" << std::endl << std::endl;
@@ -132,6 +165,10 @@ Hotel Sistema::pickHotelRoom() {
 	return emptyHotelRoom;
 }
 
+/// <summary>
+/// 
+/// Funcao miscelanea que imprime uma linha delimitadora no console
+/// </summary>
 void Sistema::printSectionDelimiter() {
 	std::cout << std::endl << "-----------------------------------------------------------------------" << std::endl;
 }

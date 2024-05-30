@@ -3,6 +3,10 @@
 
 #include <iostream>
 
+/// <summary>
+/// 
+/// Struct que organiza e armazena informcoes de localizacao
+/// </summary>
 typedef struct Location_ {
 	std::string country, state, city;
 } Location;

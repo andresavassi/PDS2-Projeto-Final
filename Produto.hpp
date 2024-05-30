@@ -7,6 +7,11 @@
 #include <string>
 #include <sstream>
 
+/// <summary>
+/// 
+/// Classe que implementa os atributos basicos comuns a todo produto
+/// e os metodos para acessa-los
+/// </summary>
 class Produto {
 	public:
 		float getPrice();

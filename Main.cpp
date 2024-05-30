@@ -18,10 +18,11 @@ int main() {
 		std::cout << "(1) reservar passagem de aviao" << std::endl;
 		std::cout << "(2) reservar quarto de hotel" << std::endl;
 		std::cout << "(3) remover item do carrinho" << std::endl;
-		std::cout << "(4) ver carrinho" << std::endl << std::endl;
+		std::cout << "(4) ver carrinho" << std::endl;
+		std::cout << "(5) fazer check-out" << std::endl << std::endl;
 		std::cout << "digite o numero correspondente a acao desejada" << std::endl;
 		mainMenuOpt = -1;
-		Sistema::readInteger(mainMenuOpt, 0, 4);
+		Sistema::readInteger(mainMenuOpt, 0, 5);
 		switch (mainMenuOpt) {
 			case 0:
 				std::cout << std::endl << "voce saiu do programa" << std::endl;
@@ -42,6 +43,10 @@ int main() {
 			case 4:
 				Sistema::printSectionDelimiter();
 				cliente.dispCart(BOTH);
+				break;
+			case 5:
+				Sistema::printSectionDelimiter();
+				cliente.checkOut();
 				break;
 			default:
 				std::cout << "o numero digitado nao corresponde a nenhuma acao" << std::endl;

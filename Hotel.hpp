@@ -3,6 +3,11 @@
 
 #include "Produto.hpp"
 
+
+/// <summary>
+/// 
+/// Classe que representa um quarto de hotel
+/// </summary>
 class Hotel : public Produto {
 	public:
 		Hotel(int id, float price, Location location, int qntd=1);
