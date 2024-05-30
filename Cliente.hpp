@@ -13,7 +13,7 @@ enum productKind {
 class Cliente {
 	public:
 		Cliente(std::string name);
-		void addToCart(Passagem passagem);
+		void addToCart(Passagem ticket);
 		void addToCart(Hotel hotel);
 		void dispCart(int productKind);
 		void removeFromCart();

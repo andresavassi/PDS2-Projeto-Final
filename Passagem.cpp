@@ -9,13 +9,15 @@ Passagem::Passagem() {
 	nowhere.country = " ";
 	this->landingLocation = nowhere;
 	this->takeOffLocation = nowhere;
+	this->qntd = 1;
 }
 
-Passagem::Passagem(int id, float price, Location takeOffLocation, Location landingLocation) {
+Passagem::Passagem(int id, float price, Location takeOffLocation, Location landingLocation, int qntd) {
 	this->id = id;
 	this->price = price;
 	this->takeOffLocation = takeOffLocation;
 	this->landingLocation = landingLocation;
+	this->qntd = qntd;
 }
 
 Location Passagem::getTakeOffLocation() {
@@ -24,4 +26,13 @@ Location Passagem::getTakeOffLocation() {
 
 Location Passagem::getLandingLocation() {
 	return this->landingLocation;
+}
+
+int Passagem::getQntd()
+{
+	return this->qntd;
+}
+
+void Passagem::setQntd(int qntd) {
+	this->qntd = qntd;
 }

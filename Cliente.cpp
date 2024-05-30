@@ -5,13 +5,14 @@ Cliente::Cliente(std::string nome) {
 	this->cartSubtotal = 0.0f;
 }
 
-void Cliente::addToCart(Passagem passagem) {
+void Cliente::addToCart(Passagem ticket) {
 	int numTickets;
-	if (passagem.getId()) {
+	if (ticket.getId()) {
 		std::cout << std::endl << "digite quantas passagens deseja reservar" << std::endl;
 		Sistema::readInteger(numTickets, 1, 10);
-		this->ticketsCart.push_back(passagem);
-		this->cartSubtotal += numTickets * passagem.getPrice();
+		ticket.setQntd(numTickets);
+		this->ticketsCart.push_back(ticket);
+		this->cartSubtotal += ticket.getQntd() * ticket.getPrice();
 	}
 }
 
@@ -20,8 +21,9 @@ void Cliente::addToCart(Hotel hotel) {
 	if (hotel.getId()) {
 		std::cout << std::endl << "digite quantas noites deseja reservar" << std::endl;
 		Sistema::readInteger(numDays, 1, 30);
+		hotel.setQntd(numDays);
 		this->hotelRoomsCart.push_back(hotel);
-		this->cartSubtotal += numDays * hotel.getPrice();
+		this->cartSubtotal += hotel.getQntd() * hotel.getPrice();
 	}
 }
 
@@ -31,10 +33,11 @@ void Cliente::dispCart(int productKind) {
 			if (!this->ticketsCart.empty()) {
 				std::cout << std::endl << "apresentando o carrinho de passagens de " << this->name << std::endl << std::endl;
 				for (Passagem ticket : this->ticketsCart) {
-					std::cout << "id: " << ticket.getId() << std::endl;
-					std::cout << "price: $" << ticket.getPrice() << std::endl;
-					std::cout << "taking off: " << ticket.getTakeOffLocation().city << std::endl;
-					std::cout << "landing: " << ticket.getLandingLocation().city << std::endl << std::endl;
+					std::cout << "id: " << ticket.getId() << ";" << std::endl;
+					std::cout << "price: $" << ticket.getPrice() << ";" << std::endl;
+					std::cout << "taking off: " << ticket.getTakeOffLocation().city << ";" << std::endl;
+					std::cout << "landing: " << ticket.getLandingLocation().city << ";" << std::endl;
+					std::cout << "qntd: " << ticket.getQntd() << ";" << std::endl << std::endl;
 				}
 			}
 		}
@@ -44,11 +47,12 @@ void Cliente::dispCart(int productKind) {
 				for (Hotel hotelRoom : this->hotelRoomsCart) {
 					std::cout << "id: " << hotelRoom.getId() << ";" << std::endl;
 					std::cout << "price/day: $" << hotelRoom.getPrice() << ";" << std::endl;
-					std::cout << "location: " << hotelRoom.getLocation().city << ";" << std::endl << std::endl;
+					std::cout << "location: " << hotelRoom.getLocation().city << ";" << std::endl;
+					std::cout << "qntd: " << hotelRoom.getQntd() << ";" << std::endl << std::endl;
 				}
 			}
 		}
-		std::cout << "subtotal da compra: " << this->cartSubtotal << std::endl << std::endl;
+		std::cout << "subtotal da compra: $" << this->cartSubtotal << std::endl << std::endl;
 	}
 	else {
 		std::cout << std::endl << "o carrinho esta vazio" << std::endl;
@@ -63,14 +67,14 @@ void Cliente::removeFromCart() {
 	std::cin >> productId;
 	for (auto it = this->ticketsCart.begin(); it != this->ticketsCart.end(); it++) {
 		if (it->getId() == productId) {
-			this->cartSubtotal -= it->getPrice();
+			this->cartSubtotal -= it->getPrice() * it->getQntd();
 			this->ticketsCart.erase(it);
 			return;
 		}
 	}
 	for (auto it = this->hotelRoomsCart.begin(); it != this->hotelRoomsCart.end(); it++) {
 		if (it->getId() == productId) {
-			this->cartSubtotal -= it->getPrice();
+			this->cartSubtotal -= it->getPrice() * it->getQntd();
 			this->hotelRoomsCart.erase(it);
 			return;
 		}
