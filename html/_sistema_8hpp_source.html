@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ProjetoFinal: Código-Fonte de Sistema.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="brasao.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">ProjetoFinal<span id="projectnumber">&#160;1.0.7</span>
+   </div>
+   <div id="projectbrief">Projeto Final da Disciplina PDS2 (2024.1)</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_sistema_8hpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Sistema.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_sistema_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SISTEMA_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SISTEMA_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_cliente_8hpp.html">Cliente.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_sistema.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sistema.html">Sistema</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sistema.html#a83829e04cf88da1de888512f553486e1">loadStoreFromFile</a>(std::string filepath);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sistema.html#a987afee458aefd66f3a9ebf05d64c56e">showProductList</a>(<span class="keywordtype">int</span> <a class="code hl_enumeration" href="_cliente_8hpp.html#a1ac0bd44ce6e3fc354750a790497e147">productKind</a>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_class" href="class_passagem.html">Passagem</a> <a class="code hl_function" href="class_sistema.html#a29b9492422d0de762a2fd6696fed69a7">pickFlyTicket</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <a class="code hl_class" href="class_hotel.html">Hotel</a> <a class="code hl_function" href="class_sistema.html#ab867de6274db2b44b38611b8e4783552">pickHotelRoom</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        std::vector&lt;std::string&gt; <a class="code hl_function" href="class_sistema.html#ad5f34a9494d01d5fd91d7e2471674413">splitString</a>(<span class="keyword">const</span> std::string&amp; s, <span class="keywordtype">char</span> delim);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sistema.html#a289ca6c3c377f1f2a57356d4e3d6e8c0">readInteger</a>(<span class="keywordtype">int</span>&amp; n, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sistema.html#a90aefddc258007a9921b89c30ad80f45">printSectionDelimiter</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        std::vector&lt;Passagem&gt; flyTickets;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        std::vector&lt;Hotel&gt; hotelRooms;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">// !SISTEMA_HPP</span></div>
+<div class="ttc" id="a_cliente_8hpp_html"><div class="ttname"><a href="_cliente_8hpp.html">Cliente.hpp</a></div></div>
+<div class="ttc" id="a_cliente_8hpp_html_a1ac0bd44ce6e3fc354750a790497e147"><div class="ttname"><a href="_cliente_8hpp.html#a1ac0bd44ce6e3fc354750a790497e147">productKind</a></div><div class="ttdeci">productKind</div><div class="ttdoc">Enumera��o que organiza os c�digos que definem a exibi��o dos produtos.</div><div class="ttdef"><b>Definição</b> Cliente.hpp:11</div></div>
+<div class="ttc" id="aclass_hotel_html"><div class="ttname"><a href="class_hotel.html">Hotel</a></div><div class="ttdoc">Classe que representa um quarto de hotel.</div><div class="ttdef"><b>Definição</b> Hotel.hpp:11</div></div>
+<div class="ttc" id="aclass_passagem_html"><div class="ttname"><a href="class_passagem.html">Passagem</a></div><div class="ttdoc">Classe que representa uma passagem de aviao.</div><div class="ttdef"><b>Definição</b> Passagem.hpp:10</div></div>
+<div class="ttc" id="aclass_sistema_html"><div class="ttname"><a href="class_sistema.html">Sistema</a></div><div class="ttdoc">Classe que representa o sistema de reservas.</div><div class="ttdef"><b>Definição</b> Sistema.hpp:10</div></div>
+<div class="ttc" id="aclass_sistema_html_a289ca6c3c377f1f2a57356d4e3d6e8c0"><div class="ttname"><a href="class_sistema.html#a289ca6c3c377f1f2a57356d4e3d6e8c0">Sistema::readInteger</a></div><div class="ttdeci">static void readInteger(int &amp;n, int min, int max)</div><div class="ttdoc">Le um inteiro dentro da faixa [min, max].</div><div class="ttdef"><b>Definição</b> Sistema.cpp:30</div></div>
+<div class="ttc" id="aclass_sistema_html_a29b9492422d0de762a2fd6696fed69a7"><div class="ttname"><a href="class_sistema.html#a29b9492422d0de762a2fd6696fed69a7">Sistema::pickFlyTicket</a></div><div class="ttdeci">Passagem pickFlyTicket()</div><div class="ttdoc">Imprime as passagens disponiveis e solicita que o usuario escolha uma delas.</div><div class="ttdef"><b>Definição</b> Sistema.cpp:133</div></div>
+<div class="ttc" id="aclass_sistema_html_a83829e04cf88da1de888512f553486e1"><div class="ttname"><a href="class_sistema.html#a83829e04cf88da1de888512f553486e1">Sistema::loadStoreFromFile</a></div><div class="ttdeci">void loadStoreFromFile(std::string filepath)</div><div class="ttdoc">Carrega a loja com os produtos lidos de um arquivo texto.</div><div class="ttdef"><b>Definição</b> Sistema.cpp:56</div></div>
+<div class="ttc" id="aclass_sistema_html_a90aefddc258007a9921b89c30ad80f45"><div class="ttname"><a href="class_sistema.html#a90aefddc258007a9921b89c30ad80f45">Sistema::printSectionDelimiter</a></div><div class="ttdeci">static void printSectionDelimiter()</div><div class="ttdoc">Funcao miscelanea que imprime uma linha delimitadora no console.</div><div class="ttdef"><b>Definição</b> Sistema.cpp:172</div></div>
+<div class="ttc" id="aclass_sistema_html_a987afee458aefd66f3a9ebf05d64c56e"><div class="ttname"><a href="class_sistema.html#a987afee458aefd66f3a9ebf05d64c56e">Sistema::showProductList</a></div><div class="ttdeci">void showProductList(int productKind)</div><div class="ttdoc">Imprime a lista de produtos cadastrados.</div><div class="ttdef"><b>Definição</b> Sistema.cpp:110</div></div>
+<div class="ttc" id="aclass_sistema_html_ab867de6274db2b44b38611b8e4783552"><div class="ttname"><a href="class_sistema.html#ab867de6274db2b44b38611b8e4783552">Sistema::pickHotelRoom</a></div><div class="ttdeci">Hotel pickHotelRoom()</div><div class="ttdoc">Imprime os quartos de hotel disponiveis para reserva e solicita que o usuario escolha um deles.</div><div class="ttdef"><b>Definição</b> Sistema.cpp:153</div></div>
+<div class="ttc" id="aclass_sistema_html_ad5f34a9494d01d5fd91d7e2471674413"><div class="ttname"><a href="class_sistema.html#ad5f34a9494d01d5fd91d7e2471674413">Sistema::splitString</a></div><div class="ttdeci">std::vector&lt; std::string &gt; splitString(const std::string &amp;s, char delim)</div><div class="ttdoc">Separa string de acordo com o caracter delimitador fonte: https://stackoverflow.com/questions/1426558...</div><div class="ttdef"><b>Definição</b> Sistema.cpp:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="_sistema_8hpp.html">Sistema.hpp</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>
