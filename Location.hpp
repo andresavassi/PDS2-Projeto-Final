@@ -5,10 +5,10 @@
 
 /// <summary>
 /// 
-/// Struct que organiza e armazena informcoes de localizacao
+/// Struct que organiza e armazena informacoes de localizacao
 /// </summary>
 typedef struct Location_ {
-	std::string country, state, city;
+	std::string country, state, city; // armazenamento de pais, estado e cidade respectivamente
 } Location;
 
 #endif // !LOCATION_HPP
